@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+    --Light_cyan: hsl(193, 38%, 86%);
+    --Neon_Green: hsl(150, 100%, 66%);
+    --Grayish_Blue: hsl(216, 20%, 29%);
+    --Dark_Grayish_Blue: hsl(219, 19%, 24%);
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Dark_Grayish_Blue);
+}
+.card {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--Grayish_Blue);
+    width:450px;
+    padding: 40px;
+    border-radius: 10px;
+}
+.card h3 {
+    color: var(--Neon_Green);
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.card h2 {
+    color: var(--Light_cyan);
+    font-size: 28px;
+}
+.card .divider {
+    margin:30px 0;
+}
+.card .border {
+    background-color: var(--Neon_Green);
+    padding: 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    bottom: -43px;
+    width: 50px;
+    height: 50px;
+    margin: -30px auto;
+    cursor: pointer;
+}
+.card .border:hover {
+    box-shadow: 2px 2px 50px var(--Neon_Green);
+    transition: all .3s;
+}
+@media screen and (max-width:555px) {
+    .card {
+        width: 70%;
+    } 
+    .card h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+    .card .divider {
+        width: 100%;
+    }   
+}
